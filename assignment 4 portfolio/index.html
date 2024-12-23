@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap');
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #353543;
+
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        .logo-txt {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ion-c {
+            color: #ffb300;
+            background: #00000098;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            padding: 7px;
+            margin-top: 25px;
+            margin-left: 10px;
+        }
+
+
+        .image-man img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .left {
+            margin-top: 10px;
+            line-height: 25px;
+        }
+
+        .right {
+            margin-top: -130px;
+        }
+
+        .txt-two {
+            display: none;
+        }
+
+        @media only screen and (max-width: 767px) {
+
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .bye {
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+
+            .hello {
+                display: none;
+            }
+
+            .txt-two {
+                display: block;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .left {
+                margin: 0px;
+            }
+
+
+
+        }
+
+        @media only screen and (max-width: 658px) {
+
+            .txt-two {
+                display: block;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .left {
+                margin: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .bye {
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 40px;
+            }
+
+            .hello {
+                display: none;
+            }
+
+            .txt-two {
+                display: block;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .left {
+                margin: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .right {
+                margin: 0px;
+            }
+
+            .left {
+                margin: 0px;
+            }
+        }
+
+        /* BOX DESIGN */
+
+        .box-grey {
+            background-color: #403f4f;
+            padding: 20px 0;
+            /* Padding for better spacing */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* Wrap boxes to next row on smaller screens */
+        }
+
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            height: 70px;
+            background-color: #353543;
+            border-radius: 6px;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+
+        .mb-3 {
+            margin-bottom: 16px;
+        }
+
+        /* box responsive design */
+
+        @media only screen and (max-width: 768px) {
+            .box {
+                height: 60px;
+                font-size: 16px;
+            }
+        }
+
+
+        @media only screen and (max-width: 576px) {
+            .box {
+                height: 55px;
+                font-size: 14px;
+            }
+        }
+        /* LAST LINES OF PAGE */
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e2f;
+            color: #fff;
+        }
+
+        .container h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .container p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .tab {
+            height: 120px;
+            width: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .text hr {
+            border: 1px solid #444;
+            margin: 1rem 0;
+        }
+
+        .text {
+            font-size: 1.1rem;
+        }
+
+        .arrow {
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .stats {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .stats span {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .stat-group p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+            color: #ccc;
+        }
+
+        .stat-number {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #ffcc00;
+        }
+        @media only screen and (max-width:350px){
+.gmgm{
+    font-size: 50px;
+}
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand logo-txt ">
+                    <img src="pngegg-removebg-preview (1).png" class="logo" alt="Logo"> Adam
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                    <div class="d-flex ms-lg-3">
+                        <a href="#" class="text-white mx-2"><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="#" class="text-white mx-2"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" class="text-white mx-2"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Section -->
+                <div class="col-sm-12 col-md-4 col-lg-4 text-lg-start left">
+                    <h1 style="font-size: 70px;" >
+                        <span style="font-weight: 300;">I'm <br></span>
+                        <span style="border-bottom: 5px solid #ffbc18;" class="gmgm">James</span> <span class="gmgm">Adam</span>
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing explicabo. Facere eaque repellat inventore
+                        temporibus dolorem alias tenetur commodi autem ad voluptate.</p>
+                </div>
+
+                <div class=" col-md-4 col-lg-4 text-lg-start txt-two">
+                    <h4>Services</h4>
+                    <h5>Let's Build Quality Project<br>In Programming and Design<br>With my Services.</h5>
+                    <h5 style="color: #ffbc18;">show more &rarr;</h5>
+                    <a href="#"><ion-icon class="ion-c" name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon class="ion-c" name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon class="ion-c" name="logo-pinterest"></ion-icon></a>
+                    <a href="#"><ion-icon class="ion-c" name="logo-twitter"></ion-icon></a>
+                </div>
+                <!-- Image Section -->
+                <div class="col-sm-12 col-md-4 col-lg-4 text-center mn-img">
+                    <img src="ggg.png" alt="Portfolio Image" class="img-fluid">
+                </div>
+                <!-- Right Section -->
+                <div class="col-sm-4 col-lg-4 text-lg-start right">
+                    <h4>Services</h4>
+                    <h5>Let's Build Quality Project<br>In Programming and Design<br>With my Services.</h5>
+                    <h5 style="color: #ffbc18;">show more &rarr;</h5>
+                    <a href="#"><ion-icon class="ion-c" name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon class="ion-c" name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon class="ion-c" name="logo-pinterest"></ion-icon></a>
+                    <a href="#"><ion-icon class="ion-c" name="logo-twitter"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row box-grey">
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-3"> <!-- Added mb-3 for bottom gap -->
+                    <div class="box square">
+                         <img src="mbh-removebg-preview.png" style="height: 50px; width: auto;">Meta
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+                    <div class="box square">
+<img src="bgbg.png" style="height: 35px; width: auto;">
+                        <!-- <span style="color: #35588c;">G</span>
+                        <span style="color: #a6303b;">o</span>
+                        <span style="color: #35588c;">o</span>
+                        <span style="color: #35588c;">g</span>
+                        <span style="color: #2ea260;">l</span>
+                        <span style="color: #a6303b;">e</span> -->
+
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+                    <div class="box square">
+                       Linkedin <img src="fff-removebg-preview.png" style="height: 30px; width: auto;">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-3">
+                    <div class="box square">
+                         <img src="download-removebg-preview (1).png" style="height: 30px; width: auto;">Slack
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>What Can I Do For <br>Your Needs</h1>
+                    <p style="line-height: 27px;">It is easier to entrust the work to the experts because they are able to provide the best results with reliable quality. Their experience allows them to anticipate challenges and address them proactively, ensuring that every detail is methodologies, they streamline the process, saving you valuable time and resources.</p>
+                    <div class="stats-container">
+                        <div class="stat-group">
+                            <p><span class="stat-number">250+</span> projects</p>
+                            <p><span class="stat-number">100+</span> projects</p>
+                        </div>
+                        <div class="stat-group">
+                            <p><span class="stat-number">30+</span> projects</p>
+                            <p><span class="stat-number">10+</span> projects</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text">
+                    <img src="https://i.pinimg.com/736x/86/dc/c2/86dcc26e54aeb4da1001a2b9a32839bb.jpg" class="img-fluid tab" alt="UI/UX Design">
+                    <p>UI/UX Design <span class="arrow">&rarr;</span></p>
+                    <hr>
+                    <img src="https://i.pinimg.com/736x/89/74/9c/89749c6f9e422594107f3a297880775b.jpg" class="img-fluid tab" alt="Front End Development">
+                    <p>Front End Develop <span class="arrow">&rarr;</span></p>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
